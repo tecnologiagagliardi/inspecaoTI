@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspeção TI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Inspeção Troca Inteligente</h1>
+    <form id="negocieForm">
+      <label>
+        Data da Inspeção:
+        <input type="text" id="dataInspecao" name="dataInspecao" readonly>
+      </label>
+      <label>
+        Código do Cliente:
+        <input type="text" id="codigo" required style="text-transform: uppercase;"
+          oninput="this.value = this.value.toUpperCase();">
+      </label>
+      <label>Razão Social:<input type="text" id="razao" readonly></label>
+      <label>Fluido:<input type="text" id="fluido" readonly></label>
+      <label>Tipo de Inspeção:<input type="text" id="tipo" readonly></label>
+      <label for="colaborador">Colaborador Inspecionador:</label>
+      <select id="colaborador" name="colaborador">
+        <option value="">-- Selecione --</option>
+        <option>ADARLAN FARIAS</option>
+        <option>ALCINO SOARES DE CARVALHO JUNIOR</option>
+        <option>ALDENIR CARNEIRO AGUIAR</option>
+        <option>ALESSANDRA MARIA MACHADO CARVALHO</option>
+        <option>ANDERSON LIMA PINTO</option>
+        <option>ANDRÉ YALLE CAVALCANTI BARBOSA</option>
+        <option>ANTONIO HENRIQUE GOMES MENESES</option>
+        <option>ANTONIO SOUSA MAIA SOBRINHO</option>
+        <option>ARTHUR GUILHERME DE SOUSA SALES</option>
+        <option>BRUNO HENRIQUE DIOGENES ALVES</option>
+        <option>CARLOS EDUARDO DE SOUZA HOLANDA</option>
+        <option>CARLOS JOSE ANDRADE DE LIMA SILVA</option>
+        <option>DAMIAO ALENCAR RODRIGUES</option>
+        <option>DIOGENES DE OLIVEIRA CLEMENTINO</option>
+        <option>EMANUEL CAMARA RODRIGUES RIBEIRO</option>
+        <option>EVANDO GENUINO DA SILVA</option>
+        <option>FABRICIO ALCANTARA PEREIRA DA SILVA</option>
+        <option>FELIPE GOUVEIA ROMUALDO</option>
+        <option>FELIPE REINALDO</option>
+        <option>FERNANDO LUIZ BEZERRA FERNANDES</option>
+        <option>FRANCISCO IGOR BARROS PAULA</option>
+        <option>FRANCISCO JONES FERREIRA PRACIANO</option>
+        <option>FRANCISCO JUAN MARTINS FERNANDES</option>
+        <option>FRANCISCO KELVELHYN ARAÚJO DE MELO BUTRAGO</option>
+        <option>FRANCISCO SILVIANO DOS SANTOS</option>
+        <option>FRANCISCO WELLINGTON SOARES DO NASCIMENTO</option>
+        <option>GABRIEL MONTEIRO DE SOUSA</option>
+        <option>GEOVANNE DA SILVA NASCIMENTO</option>
+        <option>GUILHERME VIEIRA DE ALMEIDA</option>
+        <option>HÉLIO PINTO FELIX</option>
+        <option>HILTON SILVA DO NASCIMENTO</option>
+        <option>HUGO DE SOUZA CALDAS</option>
+        <option>ISABELE NUNES DELFINO</option>
+        <option>JEFFERSON DANIELY MARTINS DE ARAUJO</option>
+        <option>JEYSON GABRIEL DO NASCIMENTO MENDES</option>
+        <option>JONATTAS WEYDER TEMOTEO CARTAXO</option>
+        <option>JORDANIO TASSO SILVA DE OLIVEIRA</option>
+        <option>JOSE COSMO DOS SANTOS JUNIOR</option>
+        <option>JOSE DE ARIMATEA PEREIRA DE OLIVEIRA</option>
+        <option>JOSE LUCIVAL MARQUES DOS SANTOS</option>
+        <option>JOSÉ MARCELINO NETO</option>
+        <option>JOSIVEUDO QUEIROZ DE CARVALHO</option>
+        <option>JUCIANO PAULO DE SOUZA</option>
+        <option>KARYNA AMORIM DA SILVA</option>
+        <option>LEANDRO MIGUEL ALVES DE CASTRO</option>
+        <option>LIESSE JOSÉ DA COSTA</option>
+        <option>LUAN HENRIQUE SOARES DE MEDEIROS</option>
+        <option>LUCAS QUEIROZ LIMA</option>
+        <option>LUIS COSMO DE BRITO FILHO</option>
+        <option>LUIS DE FRANCA N PACHECO</option>
+        <option>LUIZ CARLOS BARBOSA</option>
+        <option>MANUEL ROSILANE MORAES DO NASCIMENTO</option>
+        <option>MARCELO DINIZ VERAS GALVAO</option>
+        <option>MARCOS ANTÔNIO OLIVEIRA DA SILVA JÚNIOR</option>
+        <option>MAX FLÓRIDO AMANCIO LOPES DINIZ BARROS</option>
+        <option>MILEIDE JANE DE FRANÇA MOTA</option>
+        <option>PEDRO ANTONIO CHAVES DIAS</option>
+        <option>PEDRO HUGO DA SILVEIRA LIMA</option>
+        <option>POSSIDONIO BARBOSA</option>
+        <option>RAFAEL RODRIGUES DA COSTA</option>
+        <option>RAVI NUNES DE MELO</option>
+        <option>RENATO CASTRO DE MESQUITA</option>
+        <option>RENNA DE CASTRO GOMES</option>
+        <option>SILAS SILVA ABREU</option>
+        <option>SIRLANDIO TRINDADE SOBRINHO</option>
+        <option>THIAGO DA SILVA RODRIGUES DE LACERDA</option>
+        <option>THIAGO DE MENDONÇA LUCAS</option>
+        <option>TIAGO VIEIRA DA SILVA</option>
+      </select>
+      <label for="kit">Kit:</label>
+      <select id="kit" name="kit">
+        <option value="">-- Selecione --</option>
+        <option>Bozza</option>
+        <option>Lupus</option>
+        <option>Incospray</option>
+      </select>
+      <label>
+        Batelada (Lote):
+        <input type="text" id="numeroLote" name="numeroLote" required placeholder="Verificar na etiqueta do tanque"
+          oninput="this.value = this.value.toUpperCase();">
+      </label>
+      <label>
+        Lacre:
+        <input type="tel" id="lacre" name="lacre" required placeholder="Verificar na etiqueta do tanque"
+          oninput="this.value = this.value.toUpperCase();">
+      </label>
+      <label>
+        Quantidade no Tanque (Lts):
+        <input type="tel" id="qtdTanque" name="qtdTanque" required placeholder="Verificar na mangueira do tanque">
+      </label>
+      <label>
+        Data Última Entrega:
+        <input type="date" id="ultimaEntrega" name="ultimaEntrega" required>
+      </label>
+      <label>
+        Observações:
+        <textarea id="observacoes" name="observacoes" rows="4"
+          placeholder="Digite observações relevantes da inspeção"></textarea>
+      </label>
+
+      <!-- Checkbox -->
+      <div style="margin-top: 30px;"></div>
+      <label>Checklist</label>
+      <!-- Propulsora -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">PROPULSORA FUNCIONANDO?</label><br>
+        <label><input type="checkbox" id="propulsoraSim" name="propulsora" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="propulsoraNao" name="propulsora" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Regulador -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">REGULADOR DE PRESSÃO FUNCIONANDO?</label><br>
+        <label><input type="checkbox" id="reguladorSim" name="regulador" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="reguladorNao" name="regulador" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Suporte -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">SUPORTE DE PAREDE PRESENTE?</label><br>
+        <label><input type="checkbox" id="suporteSim" name="suporte" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="suporteNao" name="suporte" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Mangueiras -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">MANGUEIRAS EM BOM ESTADO?</label><br>
+        <label><input type="checkbox" id="mangueirasSim" name="mangueiras" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="mangueirasNao" name="mangueiras" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Bico Digital -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">BICO DOSADOR DIGITAL FUNCIONANDO?</label><br>
+        <label><input type="checkbox" id="bicoDigitalSim" name="bicoDigital" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="bicoDigitalNao" name="bicoDigital" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Inmetro -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">BICO DOSADOR CALIBRADO PELO INMETRO?</label><br>
+        <label><input type="checkbox" id="inmetroSim" name="inmetro" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="inmetroNao" name="inmetro" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Visor -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">VISOR DE ACRÍLICO PRESENTE?</label><br>
+        <label><input type="checkbox" id="visorSim" name="visor" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="visorNao" name="visor" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Bacia -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">BACIA DE CONTENÇÃO PRESENTE?</label><br>
+        <label><input type="checkbox" id="baciaSim" name="bacia" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="baciaNao" name="bacia" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Rótulo -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">RÓTULO E ADESIVO DE SEGURANÇA PRESENTE?</label><br>
+        <label><input type="checkbox" id="rotuloSim" name="rotulo" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="rotuloNao" name="rotulo" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Qualidade -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">ADESIVO DA QUALIDADE PRESENTE?</label><br>
+        <label><input type="checkbox" id="qualidadeSim" name="qualidade" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="qualidadeNao" name="qualidade" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Certificado -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">CERTIFICADO DE QUALIDADE PRESENTE?</label><br>
+        <label><input type="checkbox" id="certificadoSim" name="certificado" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="certificadoNao" name="certificado" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Aspecto -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">ASPECTO GERAL LIMPO?</label><br>
+        <label><input type="checkbox" id="aspectoSim" name="aspecto" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="aspectoNao" name="aspecto" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Contaminantes -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">EQUIPAMENTO COBERTO E LIVRE DE CONTAMINANTES?</label><br>
+        <label><input type="checkbox" id="contaminantesSim" name="contaminantes" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="contaminantesNao" name="contaminantes" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Treinamento -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">REALIZADO TREINAMENTO PARA MANUSEIO DO KIT?</label><br>
+        <label><input type="checkbox" id="treinamentoSim" name="treinamento" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="treinamentoNao" name="treinamento" value="Não"> NÃO</label>
+      </div>
+
+      <!-- Guia -->
+      <div style="margin-top: 10px;">
+        <label style="font-weight: 600;">CLIENTE ORIENTADO QUANTO ÀS INFORMAÇÕES DO GUIA?</label><br>
+        <label><input type="checkbox" id="guiaSim" name="guia" value="Sim"> SIM</label>
+        &nbsp;&nbsp;
+        <label><input type="checkbox" id="guiaNao" name="guia" value="Não"> NÃO</label>
+      </div>
+
+      <button type="submit">Enviar / Resumo</button>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalConfirmacao" class="modal">
+    <div class="modal-content">
+      <h2>Revisar Informações</h2>
+      <h3>Não esqueça de enviar as Fotos também</h3>
+      <pre id="modalTexto" style="white-space:pre-wrap;"></pre>
+      <div class="modal-buttons">
+        <button id="btnConfirmar">Enviar por Whatsapp</button>
+        <button id="btnFechar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+
+</html>
